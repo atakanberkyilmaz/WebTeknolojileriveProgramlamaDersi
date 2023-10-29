@@ -1,0 +1,98 @@
+﻿@using WebTeknolojileriveProgramlama.Models;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    List<Urun> urunListesi = new List<Urun>
+    {
+        new Urun
+        {
+            Id = 1,
+            UrunAdi = "Klavye",
+            Kategori="Çevre birimi",
+            Fiyat = 125.69M
+        },
+        new Urun
+        {
+            Id = 2,
+            UrunAdi = "Fare",
+            Kategori="Çevre birimi",
+            Fiyat = 12225
+        },
+        new Urun
+        {
+            Id = 3,
+            UrunAdi = "Mikrofon",
+            Kategori="Çevre birimi",
+            Fiyat = 50000
+        },
+        new Urun
+        {
+            Id = 4,
+            UrunAdi = "Süt",
+            Kategori="İçecek",
+            Fiyat = 50
+        },
+
+    };
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Kategori</th>
+            <th>Ürün</th>
+            <th>Fiyat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@urunListesi[0].Id</td>
+            <td>@urunListesi[0].Kategori</td>
+            <td>@urunListesi[0].UrunAdi</td>
+            <td>@urunListesi[0].Fiyat</td>
+        </tr>
+        <tr>
+            <td>@urunListesi[1].Id</td>
+            <td>@urunListesi[1].Kategori</td>
+            <td>@urunListesi[1].UrunAdi</td>
+            <td>@urunListesi[1].Fiyat</td>
+        </tr>
+        <tr>
+            <td>@urunListesi[2].Id</td>
+            <td>@urunListesi[2].Kategori</td>
+            <td>@urunListesi[2].UrunAdi</td>
+            <td>@urunListesi[2].Fiyat</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Kategori</th>
+            <th>Ürün</th>
+            <th>Fiyat</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var urun in urunListesi)
+        {
+            <tr>
+                <td>@urun.Id</td>
+                <td>@urun.Kategori</td>
+                <td>@urun.UrunAdi</td>
+                <td>@urun.Fiyat</td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+
+
+

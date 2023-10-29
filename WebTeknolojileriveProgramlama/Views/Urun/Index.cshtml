@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var kategori = "Telefon";
+    var urun = "ISUBÜ A999";
+
+    var fiyat = 5000;
+    var stokAdeti = 1000;
+
+    var liste = new List<int>
+    {
+      1,2,3,4,5
+    };
+    var satisdaMi = true;
+}
+
+<h1>@kategori</h1>
+<p>@urun</p>
+<label>Fiyat:@fiyat </label>
+<br />
+<span> @stokAdeti adet stok vardır</span>
+<hr />
+
+@if(satisdaMi)
+{
+    <span style="color:green">Ürün Satın alınabilir</span>
+}
+else
+{
+    <span style="color:red">Ürün Satın ALINIMAZ</span>
+}
+
+@for (int i = 0; i < liste.Count; i++)
+{
+    <div>@liste[i]</div>
+}
+

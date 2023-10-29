@@ -1,0 +1,30 @@
+﻿@using WebTeknolojileriveProgramlama.Models;
+@model List<Personel>
+
+@{
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Departman</th>
+            <th>İşlemler</th>
+            <th>İşlemler2</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var personel in Model)
+        {
+            <tr>
+                <td>@personel.Ad</td>
+                <td>@personel.Soyad</td>
+                <td>@personel.Departman</td>
+                <td><a class="btn btn-primary" href="/Personel/Detay/@personel.Id">Detay</a></td>
+                <td><a href="/Personel/Detay2?personelId=@personel.Id">Detay 2</a></td>
+            </tr>
+        }
+    </tbody>
+    
+</table>
