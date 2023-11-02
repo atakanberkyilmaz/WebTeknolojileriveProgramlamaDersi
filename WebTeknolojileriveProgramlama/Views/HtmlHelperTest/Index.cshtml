@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var ogrenciListesi = new List<SelectListItem>()
+    {
+        new SelectListItem("Ali", "1"),
+        new SelectListItem("Veli", "2"),
+        
+    };
+
+}
+
+
+
+<div class="row">
+    <div class="mb-5">
+        <input type ="text" id ="txtUrunAd" name="txtUrunAd" value=""/> @*  
+            style ile 
+        bu daha eski bir textbox *@
+        <br />
+
+       @Html.TextBox("txtAd","Ali", null, new {@class = "form-control my-2"} )
+        @Html.TextBox("txtAd", null, new {@class = "form-control my-2", placeHolder = "Adınızı Giriniz"}  )
+    </div>
+    
+    <div class="mb-5">
+        <label>Aktiflik Durumu:</label>
+        @Html.CheckBox("checkBoxEngelliMi", true)
+
+    </div>
+    <div class="mb-5">
+        @* <label>HiddenOrnek:</label>
+        @Html.Hidden("hiddenBox", true) *@
+        <label>Şifrenizi giriniz:</label>
+        @Html.Password("sifre1",null, new{@class="form-control my-2",})
+
+        
+    </div>
+    <div class="mb-5">
+        <label>Yorum Yazın:</label>
+        @Html.TextArea("textAreaTest",null, new{@class="form-control my-2",}) @* Sitede yorum yazma kısmı için kullanılabilir *@
+    </div>
+
+
+    <div class="mb-5">
+        <label>Öğrenciler:</label>
+        @Html.DropDownList("dropDownOgrenciler", ogrenciListesi, new {@class="form-control my-2",}) 
+    </div>
+    <div class="mb-5">
+        <label>Öğrenciler:</label>
+        @Html.ListBox("dropDownOgrenciler", ogrenciListesi, new {@class="form-control my-2",})
+    </div>
+
+    @using(Html.BeginForm("UrunKaydet", "HtmlHelperTest", FormMethod.Post))
+    {
+        @Html.TextBox("Ad", "test") 
+
+        <input type ="submit" value="Kaydet" class="btn btn-success"/>
+
+    }
+    <div class="mb-5">
+
+        @Html.MyTextBox("Aresi")
+
+    </div>
+    
+</div>

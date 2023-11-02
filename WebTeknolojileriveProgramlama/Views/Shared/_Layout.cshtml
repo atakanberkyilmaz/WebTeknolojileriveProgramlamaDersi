@@ -1,12 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
+<head> @* meta data bilgilerini buraya yazarız
+    sitenin bilgilerini burada tutar
+    
+    
+    
+    *@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebTeknolojileriveProgramlama</title>
+    <title>@ViewData["Title"] - WebTeknolojileriveProgramlama Test</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Hafta4.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebTeknolojileriveProgramlama.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
@@ -25,14 +30,37 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                    </ul>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("Index","HtmlHelperTest")">Html Helper</a>
+                        </li>
+                        
+
+
+                       @*  <li class="nav-item">
+                            <a class="nav-link text-dark" href ="/urun">Ürünler manuel</a>
+
+                        </li>
+                        <li class="nav-item"> 
+                         <a class="nav-link text-dark" href=@Url.Action("Index","Urun")>Ürünler Url Action</a>-------------- URL HELPERLAR-------- Routing methodun değişirse bunu değilde yukarıdakini kullanırsan bulamazsın 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href=@Url.ActionLink("Index","Urun")>Ürünler Url ActionLink</a> 
+                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href=@Url.ActionLink("UrunDetay","Urun", new {id = 10})>Ürünler Url ActionLink P</a>  parametreli Actionlink 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href=@Url.ActionLink("UrunDetay","Urun", new {id = 10, KategoriId = 20})>Ürünler Url ActionLink P</a>   Kategoriye göre parametre alma 
+                        </li> *@
+                        </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            @RenderBody() 
+
         </main>
     </div>
 

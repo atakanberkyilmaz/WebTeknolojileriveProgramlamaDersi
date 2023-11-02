@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Text.Json;
+using WebTeknolojileriveProgramlama.Extensions;
 
 namespace WebTeknolojileriveProgramlama.Controllers
 {
@@ -16,6 +17,16 @@ namespace WebTeknolojileriveProgramlama.Controllers
 
         public IActionResult Index()
         {
+            var ad = "";
+            var sonuc = MyHtmlExtensions.IsNullOrEmpty(ad);
+
+            if (ad.IsNullOrEmpty())
+             {
+                //boş bırakamazsın
+            }
+
+
+
             var personel = new Personel()
             {
                 Id = 1,

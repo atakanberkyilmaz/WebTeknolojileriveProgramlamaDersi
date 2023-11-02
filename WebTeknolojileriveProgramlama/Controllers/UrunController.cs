@@ -4,6 +4,7 @@ namespace WebTeknolojileriveProgramlama.Controllers
 {
     public class UrunController : Controller
     {
+        public dynamic KategoriId { get; private set; }
 
         //asdasd
 
@@ -19,6 +20,13 @@ namespace WebTeknolojileriveProgramlama.Controllers
 
         public IActionResult UrunListesi()
         {
+            return View();
+        }
+
+        public IActionResult UrunDetay(int id)
+        {
+            ViewBag.id = id;
+            ViewBag.KategoriId = KategoriId;
             return View();
         }
     }

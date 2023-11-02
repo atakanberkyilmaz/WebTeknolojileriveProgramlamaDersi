@@ -15,4 +15,7 @@
 //viewbag-> dynamic tutuyo direkt model gönderilebilir
 
 //IActionResult -> ActionResult, kullanıcı ile veri iletişimini sağladığı için kullanıcıya gönderilecek veri sayfası Controller ismiyle aynı olan klasörün içerisinde metot ismi ile aynı isimde sayfa olarak bulunmalıdır.
+//wwwroot jquery, css ,js gibi yazılım dillerini tutar
+
+// ReaderBody: kullandığımız cshtml dosyasındaki yazıları h1.... kullanmamıza yarar
 #endregion
