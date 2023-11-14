@@ -5,6 +5,7 @@
         public string OgrenciNo { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
+        public int Id { get; internal set; }
 
         public void Test()
         {

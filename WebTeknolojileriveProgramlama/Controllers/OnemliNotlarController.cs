@@ -18,4 +18,6 @@
 //wwwroot jquery, css ,js gibi yazılım dillerini tutar
 
 // ReaderBody: kullandığımız cshtml dosyasındaki yazıları h1.... kullanmamıza yarar
+
+// Html Helper ve Tag Helperın değişimi
 #endregion

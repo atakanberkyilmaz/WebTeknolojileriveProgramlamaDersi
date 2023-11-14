@@ -14,4 +14,8 @@
     <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="HtmlTags" Version="9.0.0" />
+  </ItemGroup>
+
 </Project>

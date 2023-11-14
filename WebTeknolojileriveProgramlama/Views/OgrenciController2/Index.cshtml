@@ -1,0 +1,31 @@
+﻿@using WebTeknolojileriveProgramlama.Models.OgrenciViewModels;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IndexViewModel
+<h1>Öğrenci Listesi</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>OgrenciNo</th>
+            <th>EPosta</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach ( var ogrenci in Model.OgrenciListesi)
+        {
+            <tr>
+                <td>@ogrenci.Ad</td>
+                <td>@ogrenci.Soyad</td>
+                <td>@ogrenci.OgrenciNo</td>
+                <td>@ogrenci.Eposta</td>
+            </tr>
+        }
+
+        
+    </tbody>
+</table>

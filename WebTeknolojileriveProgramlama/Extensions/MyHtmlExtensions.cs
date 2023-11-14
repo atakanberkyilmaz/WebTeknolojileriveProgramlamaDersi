@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Html;
+﻿using HtmlTags;
+using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -26,7 +27,7 @@ namespace WebTeknolojileriveProgramlama.Extensions
             //labelTagBuilder.InnerHtml.Append("Lütfen Adınızı Girin");
 
             labelTagBuilder.Attributes.Add("for", expression);
-            labelTagBuilder.InnerHtml.Append(labelText);
+            labelTagBuilder.InnerHtml.Append(labelTExt);
 
             //Dışarda bir div oluşturup içine label koyup bir tane input 
             var mainDiv = new TagBuilder("div");
@@ -37,7 +38,7 @@ namespace WebTeknolojileriveProgramlama.Extensions
             colDivTagBuilder.AddCssClass("col-md-8");
 
             //var textBoxTag = helper.TextBox("ad", null, new { @class = "form-control"});
-            colDivTagBuilder.InnerHtml.AppendHtml(textBoxTag);
+            = colDivTagBuilder.InnerHtml.AppendHtml(TextboxTag);
 
             mainDiv.InnerHtml.AppendHtml(colDivTagBuilder);
 
