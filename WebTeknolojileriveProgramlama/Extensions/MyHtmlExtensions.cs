@@ -16,7 +16,7 @@ namespace WebTeknolojileriveProgramlama.Extensions
         public static IHtmlContent MyTextBox(this IHtmlHelper helper,
             string labelTExt, string expression, object value, object htmlAttributes )
         {
-            //StringBuilder sb = new StringBuilder();
+            //StringBuilder sb = new StringBuilder(); 
             //sb Append("<input type= 'text' ") // böyle de yazabilirdik ancak bazı değişkenleri unutabilirdik
             //https://formsflow.ai/try-it-now/
 

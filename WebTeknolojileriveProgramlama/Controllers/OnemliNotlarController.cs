@@ -13,6 +13,7 @@
 
 //veri taşıma için viewdata -> key-value tarzında tutuyo
 //viewbag-> dynamic tutuyo direkt model gönderilebilir
+//temp
 
 //IActionResult -> ActionResult, kullanıcı ile veri iletişimini sağladığı için kullanıcıya gönderilecek veri sayfası Controller ismiyle aynı olan klasörün içerisinde metot ismi ile aynı isimde sayfa olarak bulunmalıdır.
 //wwwroot jquery, css ,js gibi yazılım dillerini tutar
@@ -24,11 +25,19 @@
 //DTO-> Data transfer object 
 
 //builder.Services.AddSingleton -> 2 tane instance oluşsun 2 tane olmasın diye singleton kullanılır
-//builder.Services.AddTransient-> 
+//builder.Services.AddTransient -> 
 
 //Ef Core -> hafif genişletilebilir ve open source olan veri erişim teknolojisi
 //Avantajlar-> Veritabanı ile tip güveli bir şekilde çalışmamızı sağlar
 //Veritabanı ile ilgili tüm süreci soyutlar
 //Kodun Okunabilirliğini artırır
 //Veritabanı ile ilgili tüm süreci soyutladığından dolayı biraz yavaştır
+
+//eğer table a uygulamadığımız migrationlar için remove-migration kullanıyoruz
+//update database <silmek istediğimiz migrationın bir önceki migration ismi> -> daha sonra remove-migration
+//Script migration: migrationları alıp, sql serverda oluşturabileceğimiz script dosyasına dönüştürüyo
+
+//[HttpGet]: Sayfayı göstermek için kullanılır
+//[HttpPost]: kullanıcı datayı kaydetmek için bu kullanılır
+
 #endregion
